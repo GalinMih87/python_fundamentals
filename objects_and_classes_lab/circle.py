@@ -2,11 +2,11 @@ class Circle:
     __pi = 3.14
 
     def __init__(self, diameter):
-        self.diameret = diameter
+        self.diameter = diameter
         self.radius = diameter / 2
 
     def calculate_circumference(self):
-        return Circle.__pi * self.diameret
+        return Circle.__pi * self.diameter
 
     def calculate_area(self):
         return Circle.__pi * self.radius * self.radius

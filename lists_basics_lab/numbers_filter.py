@@ -1,0 +1,22 @@
+n = int(input())
+numbers = [int(input()) for _ in range(n)]
+filtered = []
+COMMAND_EVEN = "even"
+COMMAND_ODD = "odd"
+COMMAND_NEGATIVE = "negative"
+COMMAND_POSITIVE = "positive"
+
+command = input()
+
+for num in numbers:
+    filter_command = (
+        (command == COMMAND_EVEN and num % 2 == 0) or
+        (command == COMMAND_ODD and num % 2 != 0) or
+        (command == COMMAND_POSITIVE and num >= 0) or
+        (command == COMMAND_NEGATIVE and num < 0)
+    )
+
+    if filter_command:
+        filtered.append(num)
+
+print(filtered)
